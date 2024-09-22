@@ -10,7 +10,7 @@ const Presentation = () => {
     return (
         <div className="grid grid-cols-2 items-center h-screen">
             <div className="flex flex-col">
-            <Description 
+            <Description
               icon={Idea}
               title="chaimae" 
               position="Software Developer"
@@ -18,19 +18,32 @@ const Presentation = () => {
             </Description>
             <img src={Arrow} alt="arrow" className="w-6 mt-16"/>
             </div>
-        
-            <div className="flex justify-end  mt-4 mr-5">
-              <div className="flex flex-col ">
-                <img src={Clavier} alt="clavier" className=""/>
-                <div className="flex flex-row ">
-                  <div className="flex flex-col">
+            <div className='flex justify-end'>
+              <div className="flex flex-col gap-2 w-72 h-[450px]">
+                <img src={Clavier} alt="clavier"/>
+                <div className="flex flex-row gap-2 h-3/5">
+                  <div className="flex flex-col gap-2 h-full flex-1">
+                    <img src={Flowers} alt="flowers" className='object-cover h-40 w-full rounded-lg'/>
+                    <img src={Chefchaouen} alt="chefchaouen" className='object-cover h-32 w-full rounded-lg'/>
+                  </div>
+                  <img src={Sky} alt="sky" className='object-cover h-[296px] flex-1 rounded-lg'/>
+                </div> 
+              </div>
+            </div>
+            
+
+            {/* <div className="flex justify-end  mt-4 mr-5 w-40">
+              <div className="flex flex-col flex-1">
+                <img src={Clavier} alt="clavier"/>
+                <div className="flex flex-row flex-1">
+                  <div className="flex flex-col flex-1 w-full">
                     <img src={Flowers} alt="flowers" className="mt-2 mb-2"/>
                     <img src={Chefchaouen} alt="chefchaouen"/>
                   </div>
                   <img src={Sky} alt="sky" className="  mt-2 ml-2"/>
                 </div>
               </div>
-            </div>
+            </div> */}
         </div>
           
     );
