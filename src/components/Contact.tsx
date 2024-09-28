@@ -15,7 +15,7 @@ const Contact = () => {
     }
     return (
         <div className="flex flex-col  gap-12 items-center justify-center h-screen relative">
-            <div className='text-6xl font-mavenPro text-[#3E333F] font-bold'>
+            <div className='text-6xl font-mavenPro text-[#3E333F] mt-[600px] lg:mt-0 lg:mt-0font-bold'>
                 <div className="absolute -mt-16 ml-56"> 
                     <img src={ContactIcon} alt="icon" className="w-16 h-16 animate-pulse" />
                 </div>

@@ -22,7 +22,7 @@ const education = [
 const Education = () => {
   return (
     <div className="grid grid-cols-1 lg:grid-cols-2 items-center h-screen">
-      <div className="flex justify-center items-center h-full">
+      <div className="flex justify-center items-center h-full mt-[400px] lg:mt-0">
         <Description
           icon={EducationIcon}
           title="education"
