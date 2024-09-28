@@ -1,4 +1,5 @@
 
+import Contact from './components/Contact';
 import Education from './components/Education';
 import NavBar from './components/NavBar';
 import Presentation from './components/Presentation';
@@ -8,7 +9,7 @@ function App() {
   const chaimaeRef = useRef<HTMLDivElement| null>(null);
   const projectsRef = useRef<HTMLDivElement| null>(null);
   const educationRef = useRef<HTMLDivElement| null>(null);
-
+  const contactRef = useRef<HTMLDivElement| null>(null);
   return (
     <>
       <div className="text-3xl bg-[#9D87CF0D] w-screen h-screen overflow-y-auto">
@@ -27,6 +28,10 @@ function App() {
           <div ref= {educationRef} id="education" className="h-screen">
          <Education/>
           </div>
+          <div ref= {contactRef} id="contact" className="h-screen">
+         <Contact/>
+          </div>
+          
         </div>
       </div>
     </>

@@ -8,15 +8,16 @@ import Arrow from '../assets/icon_arrow.svg';
 import Description from './Description';
 const Presentation = () => {
     return (
-        <div className="grid grid-cols-2 items-center h-screen">
-            <div className="flex flex-col">
+      
+    <div className="grid grid-cols-1 lg:grid-cols-2 items-center h-screen">
+      <div className="flex flex-col justify-center items-center h-full">
             <Description
               icon={Idea}
               title="chaimae" 
               position="Software Developer"
               description="I am a software developer with experience in web development. I am currently learning React and TypeScript. I am also learning how to use Tailwind CSS to style my web applications. I am looking for a job as a software developer.">
             </Description>
-            <img src={Arrow} alt="arrow" className="w-6 mt-16"/>
+            <img src={Arrow} alt="arrow" className="w-6 mt-16 mr-96"/>
             </div>
             <div className='flex justify-end'>
               <div className="flex flex-col gap-2 w-72 h-[450px]">
@@ -31,20 +32,9 @@ const Presentation = () => {
               </div>
             </div>
             
-
-            {/* <div className="flex justify-end  mt-4 mr-5 w-40">
-              <div className="flex flex-col flex-1">
-                <img src={Clavier} alt="clavier"/>
-                <div className="flex flex-row flex-1">
-                  <div className="flex flex-col flex-1 w-full">
-                    <img src={Flowers} alt="flowers" className="mt-2 mb-2"/>
-                    <img src={Chefchaouen} alt="chefchaouen"/>
-                  </div>
-                  <img src={Sky} alt="sky" className="  mt-2 ml-2"/>
-                </div>
-              </div>
-            </div> */}
-        </div>
+       
+    </div>
+        
           
     );
 }

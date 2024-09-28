@@ -19,7 +19,7 @@ const education = [
   },
 ];
 
-function Education() {
+const Education = () => {
   return (
     <div className="grid grid-cols-1 lg:grid-cols-2 items-center h-screen">
       <div className="flex justify-center items-center h-full">
