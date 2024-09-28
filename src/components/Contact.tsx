@@ -22,10 +22,10 @@ const Contact = () => {
                 <div className='text-base font-mavenPro text-[#3E333F] hover:cursor-pointer opacity-80 hover:opacity-100' onClick={() => handleClick("email")}>
                     email↗️
                 </div>
-                <div className='text-base font-mavenPro text-[#3E333F] hover:cursor-pointer' onClick={() => handleClick("linkedin")}>
+                <div className='text-base font-mavenPro text-[#3E333F] hover:cursor-pointer opacity-80 hover:opacity-100' onClick={() => handleClick("linkedin")}>
                     linkedin↗️
                 </div>
-                <div className='text-base font-mavenPro text-[#3E333F] hover:cursor-pointer' onClick={() => handleClick("github")}>
+                <div className='text-base font-mavenPro text-[#3E333F] hover:cursor-pointer opacity-80 hover:opacity-100' onClick={() => handleClick("github")}>
                     github↗️
                 </div>
             </div>
