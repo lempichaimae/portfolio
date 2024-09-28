@@ -33,6 +33,12 @@ function App() {
          <Contact/>
           </div>
         </div>
+        <footer className="py-4">
+            <hr className="border-t border-[#9D87CF80] my-2" />
+            <div className="text-center font-mavenPro text-[#3E333F] text-base">
+                <p> made with 💜 by chaimae - 2024</p>
+            </div>
+        </footer>
       </div>
     </>
   )
