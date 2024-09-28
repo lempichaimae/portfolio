@@ -1,4 +1,3 @@
-import { Link } from 'react-scroll';
 import React, { useEffect, useState } from 'react';
 import NavButton from './NavButton';
 
@@ -6,23 +5,23 @@ interface NavBarProps {
   chaimae: React.RefObject<HTMLDivElement>;
   projects: React.RefObject<HTMLDivElement>;
   education: React.RefObject<HTMLDivElement>;
+  contact: React.RefObject<HTMLDivElement>;
 }
 
-const NavBar: React.FC<NavBarProps> = ({ chaimae, projects, education }) => {
+const NavBar: React.FC<NavBarProps> = ({ chaimae, projects, education, contact }) => {
   const [activeLink, setActiveLink] = useState('chaimae');
 
-  // Handle section observation using IntersectionObserver
   useEffect(() => {
     const options = {
-      root: null, // Use the viewport as the root
-      threshold: 0.5, // 50% of the section should be visible to trigger the observer
+      root: null,
+      threshold: 0.5, 
     };
 
     const handleIntersection = (entries: IntersectionObserverEntry[]) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           const sectionId = entry.target.id;
-          setActiveLink(sectionId); // Set the active link based on the visible section
+          setActiveLink(sectionId);
         }
       });
     };
@@ -32,15 +31,18 @@ const NavBar: React.FC<NavBarProps> = ({ chaimae, projects, education }) => {
     const chaimaeSection = chaimae.current;
     const projectsSection = projects.current;
     const educationSection = education.current;
+    const contactSection = contact.current;
 
     if (chaimaeSection) observer.observe(chaimaeSection);
     if (projectsSection) observer.observe(projectsSection);
     if (educationSection) observer.observe(educationSection);
+    if (contactSection) observer.observe(contactSection);
 
     return () => {
       if (chaimaeSection) observer.unobserve(chaimaeSection);
       if (projectsSection) observer.unobserve(projectsSection);
       if (educationSection) observer.unobserve(educationSection);
+      if (contactSection) observer.unobserve(contactSection);
     };
   }, [chaimae, projects]);
 
@@ -55,6 +57,10 @@ const NavBar: React.FC<NavBarProps> = ({ chaimae, projects, education }) => {
         education.current?.scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'nearest' });
       setActiveLink('education');
     }
+    else if (element === 'contact') {
+      contact.current?.scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'nearest' });
+    setActiveLink('contact');
+  }
   };
 
   return (
@@ -79,17 +85,13 @@ const NavBar: React.FC<NavBarProps> = ({ chaimae, projects, education }) => {
           onClick={() => handleClick('education')} 
         />
         </div>
-        <Link
-          to="contact"
-          spy={true}
-          smooth={true}
-          duration={500}
-          className={`text-sm font-mavenPro text-[#3E333F] cursor-pointer
-            ${activeLink === 'contact' ? 'after:content-[""] after:absolute after:left-0 after:right-0 after:bottom-0 after:h-[2px] after:bg-[#AA56B9] after:w-1/2 after:rounded' : ''}`}
-          onSetActive={() => setActiveLink('contact')}
-        >
-          contact
-        </Link>
+        <div className="flex space-x-10 ml-auto">
+        <NavButton 
+          label="contact" 
+          active={activeLink === 'contact'} 
+          onClick={() => handleClick('contact')} 
+        />
+        </div>
       </div>
     </div>
   );

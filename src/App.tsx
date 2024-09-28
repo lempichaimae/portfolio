@@ -18,6 +18,7 @@ function App() {
           chaimae={chaimaeRef}
           projects={projectsRef}
           education={educationRef}
+          contact={contactRef}
           />
           <div ref={chaimaeRef} id="chaimae" className="h-screen">
             <Presentation/>
@@ -31,7 +32,6 @@ function App() {
           <div ref= {contactRef} id="contact" className="h-screen">
          <Contact/>
           </div>
-          
         </div>
       </div>
     </>

@@ -21,7 +21,6 @@ const Contact = () => {
                 </div>
             contact
             </div>
-           
             <div className='flex flex-row gap-20'>
                 <div className='text-base font-mavenPro text-[#3E333F] hover:cursor-pointer' onClick={() => handleClick("email")}>
                     email
