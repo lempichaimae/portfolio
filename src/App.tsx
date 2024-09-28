@@ -16,6 +16,7 @@ function App() {
           <NavBar
           chaimae={chaimaeRef}
           projects={projectsRef}
+          education={educationRef}
           />
           <div ref={chaimaeRef} id="chaimae" className="h-screen">
             <Presentation/>

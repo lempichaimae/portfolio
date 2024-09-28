@@ -5,9 +5,10 @@ import NavButton from './NavButton';
 interface NavBarProps {
   chaimae: React.RefObject<HTMLDivElement>;
   projects: React.RefObject<HTMLDivElement>;
+  education: React.RefObject<HTMLDivElement>;
 }
 
-const NavBar: React.FC<NavBarProps> = ({ chaimae, projects }) => {
+const NavBar: React.FC<NavBarProps> = ({ chaimae, projects, education }) => {
   const [activeLink, setActiveLink] = useState('chaimae');
 
   // Handle section observation using IntersectionObserver
@@ -28,17 +29,18 @@ const NavBar: React.FC<NavBarProps> = ({ chaimae, projects }) => {
 
     const observer = new IntersectionObserver(handleIntersection, options);
 
-    // Start observing the sections
     const chaimaeSection = chaimae.current;
     const projectsSection = projects.current;
+    const educationSection = education.current;
 
     if (chaimaeSection) observer.observe(chaimaeSection);
     if (projectsSection) observer.observe(projectsSection);
+    if (educationSection) observer.observe(educationSection);
 
-    // Cleanup observer on component unmount
     return () => {
       if (chaimaeSection) observer.unobserve(chaimaeSection);
       if (projectsSection) observer.unobserve(projectsSection);
+      if (educationSection) observer.unobserve(educationSection);
     };
   }, [chaimae, projects]);
 
@@ -49,6 +51,9 @@ const NavBar: React.FC<NavBarProps> = ({ chaimae, projects }) => {
     } else if (element === 'projects') {
         projects.current?.scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'nearest' });
       setActiveLink('projects');
+    } else if (element === 'education') {
+        education.current?.scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'nearest' });
+      setActiveLink('education');
     }
   };
 
@@ -67,17 +72,13 @@ const NavBar: React.FC<NavBarProps> = ({ chaimae, projects }) => {
           active={activeLink === 'projects'} 
           onClick={() => handleClick('projects')} 
         />
-        <Link
-          to="education"
-          spy={true}
-          smooth={true}
-          duration={500}
-          className={`text-sm font-mavenPro text-[#3E333F] cursor-pointer
-            ${activeLink === 'education' ? 'after:content-[""] after:absolute after:left-0 after:right-0 after:bottom-0 after:h-[2px] after:bg-[#AA56B9] after:w-1/2 after:rounded' : ''}`}
-          onSetActive={() => setActiveLink('education')}
-        >
-          education
-        </Link>
+       <div className="flex space-x-10 ml-auto">
+        <NavButton 
+          label="education" 
+          active={activeLink === 'education'} 
+          onClick={() => handleClick('education')} 
+        />
+        </div>
         <Link
           to="contact"
           spy={true}
