@@ -38,7 +38,7 @@ const Projects = () => {
                     <ProjectCard key={index} project={project} />
                 ))}
             </div>
-            <div className="flex  justify-center lg:justify-end order-1 lg:order-2 mt-72 lg:mt-0">
+            <div className="flex  justify-center lg:justify-end order-1 lg:order-2 mt-80 md:mt-0">
                 <Description
                     icon={Stars}
                     title="projects"

@@ -10,16 +10,16 @@ const Presentation = () => {
     return (
       
     <div className="grid grid-cols-1 lg:grid-cols-2 items-center h-screen">
-      <div className="flex flex-col justify-center items-center h-full mt-12 lg:mt-0">
+      <div className="flex flex-col justify-center items-center h-full mt-5 md:mt-0">
             <Description
               icon={Idea}
               title="chaimae" 
               position="Software Developer"
               description="I am a software developer with experience in web development. I am currently learning React and TypeScript. I am also learning how to use Tailwind CSS to style my web applications. I am looking for a job as a software developer.">
             </Description>
-            <img src={Arrow} alt="arrow" className="w-6 mt-16 mr-96"/>
+            <img src={Arrow} alt="arrow" className="w-6 mt-16 my-16 md:mb-0 md:mr-96"/>
             </div>
-            <div className='flex justify-center lg:justify-end'>
+            <div className='flex justify-center md:justify-end'>
               <div className="flex flex-col gap-2 w-72 h-[450px]">
                 <img src={Clavier} alt="clavier"/>
                 <div className="flex flex-row gap-2 h-3/5">
