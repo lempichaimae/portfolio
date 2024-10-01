@@ -18,7 +18,7 @@ const Presentation = () => {
               position={Descriptions.Presentation.position}
               description={Descriptions.Presentation.description}>
             </Description>
-            <img src={Arrow} alt="arrow" className="w-6 mt-16 my-16 md:mb-0 md:mr-96"/>
+            <img src={Arrow} alt="arrow" className="w-6 mt-0 mb-4 md:mt-16 my-16 md:mb-0 md:mr-96"/>
             </div>
             <div className='flex justify-center md:justify-end'>
               <div className="flex flex-col gap-2 w-72 h-[450px]">
