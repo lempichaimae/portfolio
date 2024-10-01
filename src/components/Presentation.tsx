@@ -6,6 +6,7 @@ import Chefchaouen from '../assets/img_chefchaouen.svg';
 import Sky from '../assets/img_sky.svg';
 import Arrow from '../assets/icon_arrow.svg';
 import Description from './Description';
+import Descriptions from '../data/Descriptions';
 const Presentation = () => {
     return (
       
@@ -13,9 +14,9 @@ const Presentation = () => {
       <div className="flex flex-col justify-center items-center h-full mt-5 md:mt-0">
             <Description
               icon={Idea}
-              title="chaimae" 
-              position="Software Developer"
-              description="I am a software developer with experience in web development. I am currently learning React and TypeScript. I am also learning how to use Tailwind CSS to style my web applications. I am looking for a job as a software developer.">
+              title={Descriptions.Presentation.title} 
+              position={Descriptions.Presentation.position}
+              description={Descriptions.Presentation.description}>
             </Description>
             <img src={Arrow} alt="arrow" className="w-6 mt-16 my-16 md:mb-0 md:mr-96"/>
             </div>

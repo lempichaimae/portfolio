@@ -1,33 +1,35 @@
 import Description from "./Description";
 import Stars from '../assets/icon_stars.svg';
 import ProjectCard, { Project } from "./ProjectCard";
-import Clavier from '../assets/img_clavier.svg';
-
+import Descriptions from "../data/Descriptions";
+import Wasabi from '../assets/img_wasabi.svg';
+import Tree from '../assets/img_tree.png';
+import Logo from '../../public/logo.png';
 const Projects = () => {
     const projects: Project[] = [
         {
-            title: 'Project 1',
-            description: 'This is a project description',
-            technologies: ['React', 'TypeScript'],
-            icon: Clavier,
-            type: 'personal',
-            link: 'https://www.google.com'
-        },
-        {
-            title: 'Project 2',
-            description: 'This is a project description This is a project description',
-            technologies: ['Tailwind CSS'],
-            icon: Clavier,
+            title: 'Wasabi Dataviz',
+            description: "I've worked with the Wasabi API, which offers a wealth of music data. I processed this data to extract the information I needed using Python and visualized it using a bar chart for analysis. Click to view the results.",
+            technologies: ['Vue', 'Python', 'D3.js'],
+            icon: Wasabi,
             type: 'university',
-            link: 'https://www.google.com'
+            link: 'https://wasabi-project.github.io/wasabi-dataviz/#/'
         },
         {
-            title: 'Project 3',
-            description: 'This is a project description',
-            technologies: ['React', 'TypeScript'],
-            icon: Clavier,
+            title: 'MyGreenWorld',
+            description: 'Designing and developing a 3D game inspired by the BeGreen theme as part of the CGI GamesOnWeb competition. Click to play!',
+            technologies: ['Vue', 'Babylon.js','Jira'],
+            icon: Tree,
+            type: 'university',
+            link: 'https://mygreenworld.netlify.app/'
+        },
+        {
+            title: 'Portfolio',
+            description: 'Building my personal portfolio website to showcase my projects and skills. Click to view the code.',
+            technologies: ['React', 'TypeScript', 'Tailwind CSS'],
+            icon: Logo,
             type: 'personal',
-            link: 'https://www.google.com'
+            link: 'https://github.com/lempichaimae/portfolio'
         }
     ];
 
@@ -41,9 +43,9 @@ const Projects = () => {
             <div className="flex  justify-center lg:justify-end order-1 lg:order-2 mt-80 md:mt-0">
                 <Description
                     icon={Stars}
-                    title="projects"
+                    title={Descriptions.Projects.title}
                     position={null}
-                    description="I am currently working on a project using React and TypeScript. I am also working on a project using Tailwind CSS. I am learning how to use Tailwind CSS to style my web applications. I am also learning how to use React and TypeScript to build web applications."
+                    description={Descriptions.Projects.description}
                 />
             </div>
         </div>

@@ -1,21 +1,22 @@
 import Description from "./Description";
 import EducationIcon from '../assets/icon_education.svg';
+import Descriptions from "../data/Descriptions";
 
 const education = [
   {
     title: "Master MIAGE",
     school: "Université Paul Sabatier, Toulouse, France",
-    tags: ["Project Management Project ManagementProject ManagementProject Management"],
+    tags: ["Project Management, Cybersecurity, Big Data, AI, Cloud Computing"],
   },
   {
     title: "Licence MIAGE",
     school: "Université Paul Sabatier, Toulouse, France",
-    tags: ["Web development"],
+    tags: ["Web development, Databases, Project Management, Information Systems"],
   },
   {
     title: "Licence AES",
     school: "Université Sophia Anipolis, Nice, France",
-    tags: ["Web development"],
+    tags: ["Management, Economics, Law, Statistics, Accounting"],
   },
 ];
 
@@ -25,9 +26,9 @@ const Education = () => {
       <div className="flex justify-center items-center h-full mt-[450px] md:mt-0">
         <Description
           icon={EducationIcon}
-          title="education"
-          position=""
-          description="I am a software developer with experience in web development. I am currently learning React and TypeScript. I am also learning how to use Tailwind CSS to style my web applications. I am looking for a job as a software developer."
+          title={Descriptions.Education.title}
+          position={null}
+          description={Descriptions.Education.description}
         />
       </div>
       <div className="h-full flex items-center relative">
