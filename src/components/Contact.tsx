@@ -19,13 +19,13 @@ const Contact = () => {
             contact
             </div>
             <div className='flex flex-col gap-3 md:flex-row md:gap-20'>
-                <div className='text-base font-mavenPro text-[#3E333F] hover:cursor-pointer opacity-80 hover:opacity-100' onClick={() => handleClick("email")}>
+                <div className='text-base font-mavenPro text-[#3E333F] hover:cursor-pointer transition-all duration-500 opacity-50 hover:opacity-100' onClick={() => handleClick("email")}>
                     email↗️
                 </div>
-                <div className='text-base font-mavenPro text-[#3E333F] hover:cursor-pointer opacity-80 hover:opacity-100' onClick={() => handleClick("linkedin")}>
+                <div className='text-base font-mavenPro text-[#3E333F] hover:cursor-pointer transition-all duration-500 opacity-50 hover:opacity-100' onClick={() => handleClick("linkedin")}>
                     linkedin↗️
                 </div>
-                <div className='text-base font-mavenPro text-[#3E333F] hover:cursor-pointer opacity-80 hover:opacity-100' onClick={() => handleClick("github")}>
+                <div className='text-base font-mavenPro text-[#3E333F] hover:cursor-pointer transition-all duration-500 opacity-50 hover:opacity-100' onClick={() => handleClick("github")}>
                     github↗️
                 </div>
             </div>

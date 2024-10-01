@@ -64,7 +64,7 @@ const NavBar: React.FC<NavBarProps> = ({ chaimae, projects, education, contact }
   };
 
   return (
-    <div className="flex justify-between items-center w-full h-10 bg-white/30 backdrop-blur-xl px-10 fixed top-0 left-0 z-10">
+    <div className="flex justify-between items-center w-full h-10 bg-white/30 backdrop-blur-xl px-4 md:px-10 fixed top-0 left-0 z-10">
       <div className="flex">
         <NavButton 
           label="chaimae" 
@@ -72,7 +72,7 @@ const NavBar: React.FC<NavBarProps> = ({ chaimae, projects, education, contact }
           onClick={() => handleClick('chaimae')}
         />
       </div>
-      <div className="flex space-x-10 ml-auto">
+      <div className="flex space-x-2 lg:space-x-10 ml-auto">
         <NavButton 
           label="projects" 
           active={activeLink === 'projects'} 
@@ -96,5 +96,4 @@ const NavBar: React.FC<NavBarProps> = ({ chaimae, projects, education, contact }
     </div>
   );
 };
-
 export default NavBar;

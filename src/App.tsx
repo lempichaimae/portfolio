@@ -14,7 +14,7 @@ function App() {
   return (
     <>
       <div className="text-3xl bg-[#9D87CF0D] w-screen min-h-screen flex flex-col overflow-x-hidden">
-        <div className="max-w-7xl mx-4 md:mx-12 xl:mx-16 flex-1">
+        <div className="max-w-7xl px-4 md:px-12 xl:px-16 flex-1 m-auto">
           <NavBar
             chaimae={chaimaeRef}
             projects={projectsRef}

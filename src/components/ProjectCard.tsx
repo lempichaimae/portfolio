@@ -14,7 +14,7 @@ const ProjectCard = ({ project }: { project: Project }) => {
         <div className="flex flex-col group overflow-hidden transition-all duration-500 p-6 rounded-lg bg-purple-100 relative hover:bg-purple-200 hover:cursor-pointer" 
         onClick={handleClick(project.link)}>
             <img src={project.icon} alt="icon" 
-            className="w-16 h-16 absolute transition-all duration-500 -top-4 -right-4 rotate-45 group-hover:rotate-0"/>
+            className="w-16 h-16 absolute transition-all duration-500 -top-4 -right-4 rotate-45 group-hover:rotate-0 group-hover:-translate-x-5 group-hover:translate-y-5  "/>
             <div className="flex flex-col gap-4 w-full">
                 <div className="text-lg font-mavenPro pr-12 text-[#3E333F] font-bold">{project.title}</div>
                 <div className="text-sm font-mavenPro w-4/5">{project.description}</div>
