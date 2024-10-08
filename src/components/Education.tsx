@@ -15,7 +15,7 @@ const education = [
   },
   {
     title: "Licence AES",
-    school: "Université Sophia Anipolis, Nice, France",
+    school: "Université Sophia Antipolis, Nice, France",
     tags: ["Management, Economics, Law, Statistics, Accounting"],
   },
 ];
