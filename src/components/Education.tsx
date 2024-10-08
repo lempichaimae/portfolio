@@ -22,8 +22,8 @@ const education = [
 
 const Education = () => {
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-2 items-center h-screen">
-      <div className="flex justify-center items-center h-full mt-[450px] md:mt-0">
+    <div className="grid grid-lig-2 lg:grid-cols-2 items-center h-full md:h-screen gap-4">
+      <div className="flex pb-7 md:pb-0 justify-center items-center h-full">
         <Description
           icon={EducationIcon}
           title={Descriptions.Education.title}
@@ -54,7 +54,7 @@ const Education = () => {
                         <div className="text-sm font-mavenPro text-[#3E333F] flex gap-1">
                           <span>📚</span>
                           {edu.tags.map((tag, tagIndex) => (
-                            <span key={tagIndex}>{tagIndex === 0 ? " " : ", "}{tag}</span>
+                            <span key={tagIndex}>{tagIndex === 0 ? "" : ", "}{tag}</span>
                           ))}
                         </div>
                       </div>

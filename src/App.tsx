@@ -29,12 +29,12 @@ function App() {
           </div>
 
           {/* Projects Section */}
-          <div ref={projectsRef} id="projects" className="min-h-screen py-8 min-w-full">
+          <div ref={projectsRef} id="projects" className="min-h-screen min-w-full">
             <Projects />
           </div>
 
           {/* Education Section */}
-          <div ref={educationRef} id="education" className="min-h-screen py-8 min-w-full">
+          <div ref={educationRef} id="education" className="min-h-screen min-w-full">
             <Education />
           </div>
 
