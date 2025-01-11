@@ -34,13 +34,13 @@ const Projects = () => {
     ];
 
     return (
-        <div className="grid grid-cols-1 lg:grid-cols-2 items-center h-screen gap-8">
+        <div className="grid grid-lig-2 lg:grid-cols-2 items-center h-full md:h-screen gap-8">
             <div className="flex flex-col gap-2 order-2 lg:order-1">
                 {projects.map((project, index) => (
                     <ProjectCard key={index} project={project} />
                 ))}
             </div>
-            <div className="flex  justify-center lg:justify-end order-1 lg:order-2 mt-40 md:mt-0">
+            <div className="flex pb-6 md:pb-0 justify-center lg:justify-end order-1 lg:order-2">
                 <Description
                     icon={Stars}
                     title={Descriptions.Projects.title}

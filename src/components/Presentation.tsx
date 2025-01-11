@@ -10,8 +10,8 @@ import Descriptions from '../data/Descriptions';
 const Presentation = () => {
     return (
       
-    <div className="grid grid-cols-1 lg:grid-cols-2 items-center h-screen">
-      <div className="flex flex-col justify-center items-center h-full mt-5 md:mt-0">
+    <div className="grid grid-lig-2 lg:grid-cols-2 items-center h-full md:h-screen">
+      <div className="flex flex-col justify-center items-center h-full  md:mt-0">
             <Description
               icon={Idea}
               title={Descriptions.Presentation.title} 
